@@ -1,3 +1,8 @@
 import './styles.css';
 
-console.log('hello world');
+const pageContent = document.querySelector('#content')
+
+function setPageContent(content) {
+    pageContent.textContent = '';
+    pageContent.append(content);
+}
