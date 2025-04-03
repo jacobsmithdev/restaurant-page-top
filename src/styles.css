@@ -4,6 +4,24 @@
     padding: 0;
 }
 
+:root {
+    /* Color Palette */
+    --dark-navy: hsl(240, 7%, 8%);
+    --dark-navy-alt: hsl(240, 10%, 16%);
+
+    --beige: hsl(41, 28%, 51%);
+    --light-beige: hsl(41, 66%, 76%);
+
+    --gold: hsl(43, 76%, 57%);
+    --gold-alt: hsl(43, 76%, 62%);
+
+    --red: hsl(0, 58%, 49%);
+    --red-alt: hsl(0, 58%, 54%);
+
+    --green: hsl(99, 40%, 38%);
+    --green-alt: hsl(99, 40%, 43%);
+}
+
 .layout-wrapper {
     display: grid;
     grid-template-columns: 1fr;
