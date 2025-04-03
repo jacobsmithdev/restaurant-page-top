@@ -20,6 +20,15 @@
 
     --green: hsl(99, 40%, 38%);
     --green-alt: hsl(99, 40%, 43%);
+
+    /* Functional Variables */
+    --body-bg: var(--dark-navy);
+    --body-text: var(--light-beige);
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-text);
 }
 
 .layout-wrapper {
