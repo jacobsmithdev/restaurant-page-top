@@ -4,6 +4,22 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'questrialregular';
+    src: url('./assets/fonts/questrial/questrial-regular-webfont.woff2') format('woff2'),
+         url('./assets/fonts/questrial/questrial-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rozha_oneregular';
+    src: url('./assets/fonts/rozha_one/rozhaone-regular-webfont.woff2') format('woff2'),
+         url('./assets/fonts/rozha_one/rozhaone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     /* Color Palette */
     --dark-navy: hsl(240, 7%, 8%);
