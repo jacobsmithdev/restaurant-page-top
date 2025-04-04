@@ -46,6 +46,9 @@
     
     --button-bg-hover: var(--gold-alt);
     --button-text-hover: var(--dark-navy-alt);
+
+    --logo-color: var(--gold);
+    --logo-color-alt: var(--green);
 }
 
 body {
@@ -79,4 +82,22 @@ body {
     background-color: var(--button-bg-hover);
     color: var(--button-text-hover);
     cursor: pointer;
+}
+
+.logo {
+    font-size: 3rem;
+    font-family: rozha_oneregular;
+    width: fit-content;
+}
+
+.logo__a {
+    text-decoration: none;
+    color: var(--logo-color);
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+
+.logo__ampersand {
+    color: var(--logo-color-alt);
 }
