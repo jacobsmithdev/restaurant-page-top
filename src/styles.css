@@ -29,6 +29,9 @@ ol, ul {
     --dark-navy: hsl(240, 7%, 8%);
     --dark-navy-alt: hsl(240, 10%, 16%);
 
+    --navy: hsl(240, 10%, 40%);
+    --navy-alt: hsl(240, 10%, 45%);
+
     --beige: hsl(41, 28%, 51%);
     --beige-alt: hsl(41, 28%, 59%);
     --light-beige: hsl(41, 66%, 76%);
@@ -59,6 +62,9 @@ ol, ul {
 
     --subtle-link-text: var(--beige);
     --subtle-link-text-hover: var(--beige-alt);
+
+    --credit-link-text: var(--navy);
+    --credit-link-text-hover: var(--navy-alt);
 }
 
 body {
@@ -130,9 +136,11 @@ body {
 .footer {
     grid-area: footer;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 32px;
-    gap: 32px;
+    gap: 8px;
 }
 
 .footer-list {
@@ -149,4 +157,14 @@ body {
 .subtle-link:hover {
     text-decoration: underline;
     color: var(--subtle-link-text-hover);
+}
+
+.credit-link {
+    text-decoration: none;
+    color: var(--credit-link-text);
+}
+
+.credit-link:hover {
+    text-decoration: underline;
+    color: var(--credit-link-text-hover);
 }
