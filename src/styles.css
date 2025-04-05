@@ -30,6 +30,7 @@ ol, ul {
     --dark-navy-alt: hsl(240, 10%, 16%);
 
     --beige: hsl(41, 28%, 51%);
+    --beige-alt: hsl(41, 28%, 59%);
     --light-beige: hsl(41, 66%, 76%);
 
     --gold: hsl(43, 76%, 57%);
@@ -53,6 +54,11 @@ ol, ul {
 
     --logo-color: var(--gold);
     --logo-color-alt: var(--green);
+
+    --footer-text: var(--beige);
+
+    --subtle-link-text: var(--beige);
+    --subtle-link-text-hover: var(--beige-alt);
 }
 
 body {
@@ -64,9 +70,10 @@ body {
 .layout-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 'header'
-                         'content';
+                         'content'
+                         'footer';
     width: 100%;
     min-height: 100vh;
 }
@@ -118,4 +125,28 @@ body {
 .header__nav {
     display: flex;
     gap: 24px;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    gap: 32px;
+}
+
+.footer-list {
+    display: flex;
+    gap: 8px;
+    color: var(--footer-text);
+}
+
+.subtle-link {
+    text-decoration: none;
+    color: var(--subtle-link-text);
+}
+
+.subtle-link:hover {
+    text-decoration: underline;
+    color: var(--subtle-link-text-hover);
 }
