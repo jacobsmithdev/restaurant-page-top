@@ -168,3 +168,34 @@ body {
     text-decoration: underline;
     color: var(--credit-link-text-hover);
 }
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: auto;
+    justify-self: center;
+    align-self: center;
+    max-width: 800px;
+}
+
+.hero__body {
+    display: grid;
+    gap: 16px;
+    padding: 32px;
+}
+
+.hero__header {
+    font-size: 2.5rem;
+    font-family: rozha_oneregular;
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 32px;
+}
+
+.hero__img {
+    background-image: url(./assets/img/placeholder.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
