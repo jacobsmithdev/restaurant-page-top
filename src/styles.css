@@ -65,6 +65,11 @@ ol, ul {
 
     --credit-link-text: var(--navy);
     --credit-link-text-hover: var(--navy-alt);
+
+    --menu-card-text: var(--dark-navy);
+    --menu-card-bg: var(--gold);
+    --menu-card-bg-green: var(--green);
+    --menu-card-bg-red: var(--red);
 }
 
 body {
@@ -198,4 +203,36 @@ body {
     background-image: url(./assets/img/placeholder.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.menu-preview {
+  max-width: 800px;
+  min-height: 200px;
+  min-width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.menu-card {
+  flex: 1;
+  text-decoration: none;
+  background: 100%/cover url('./assets/img/placeholder_bg.png') no-repeat;
+  display: grid;
+}
+
+.menu-card--green .menu-card__text {
+    background-color: var(--menu-card-bg-green);
+}
+
+.menu-card--red .menu-card__text {
+    background-color: var(--menu-card-bg-red);
+}
+
+.menu-card__text {
+  background-color: var(--menu-card-bg);
+  font-weight: bold;
+  color: var(--menu-card-text);
+  padding: 8px 32px;
+  place-self: start;
 }

@@ -2,7 +2,8 @@ const homePage = document.createElement('div');
 homePage.classList.add('home-page-wrapper');
 
 const hero = createHeroElement();
-homePage.append(hero);
+const menu = createMenuElement();
+homePage.append(hero, menu);
 
 function createHeroElement() {
     const hero = document.createElement('div');
@@ -40,6 +41,44 @@ function createHeroElement() {
     body.append(header, text, buttonsContainer);
     hero.append(body, heroImg);
     return hero;
+}
+
+function createMenuElement() {
+    const menu = document.createElement('div');
+
+    const specialsCard = document.createElement('a');
+    const soupCard = document.createElement('a');
+    const breadCard = document.createElement('a');
+
+    const specialsText = document.createElement('div');
+    const soupsText = document.createElement('div');
+    const breadsText = document.createElement('div');
+
+    menu.classList.add('menu-preview');
+
+    specialsCard.classList.add('menu-card', 'menu-card--red');
+    soupCard.classList.add('menu-card');
+    breadCard.classList.add('menu-card', 'menu-card--green');
+    
+    specialsText.classList.add('menu-card__text');
+    soupsText.classList.add('menu-card__text');
+    breadsText.classList.add('menu-card__text');
+    
+    specialsText.textContent = 'Specials';
+    soupsText.textContent = 'Soups';
+    breadsText.textContent = 'Breads';
+
+    specialsCard.setAttribute('href', '#');
+    soupCard.setAttribute('href', '#');
+    breadCard.setAttribute('href', '#');
+
+    specialsCard.append(specialsText);
+    soupCard.append(soupsText);
+    breadCard.append(breadsText);
+
+    menu.append(specialsCard, soupCard, breadCard);
+
+    return menu;
 }
 
 export default homePage;
