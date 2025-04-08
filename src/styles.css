@@ -174,13 +174,16 @@ body {
     color: var(--credit-link-text-hover);
 }
 
+#content {
+    display: grid;
+    max-width: 800px;
+    justify-self: center;
+}
+
 .hero {
     display: grid;
     grid-template-columns: 1fr 200px;
     grid-template-rows: auto;
-    justify-self: center;
-    align-self: center;
-    max-width: 800px;
 }
 
 .hero__body {
@@ -206,7 +209,6 @@ body {
 }
 
 .menu-preview {
-  max-width: 800px;
   min-height: 200px;
   min-width: 200px;
   display: flex;
