@@ -55,6 +55,10 @@ ol, ul {
     --button-bg-hover: var(--gold-alt);
     --button-text-hover: var(--dark-navy-alt);
 
+    --header-bg: var(--dark-navy-alt);
+    --header-color: var(--gold);
+    --header-color-alt: var(--gold-alt);
+
     --logo-color: var(--gold);
     --logo-color-alt: var(--green);
 
@@ -118,8 +122,27 @@ body {
     cursor: pointer;
 }
 
+.button--header {
+    font-size: 1.1rem;
+    border-radius: 0px;
+    padding: 8px 16px;
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    transition: border 100ms,
+                color 100ms;
+}
+
+.button--header:hover {
+    background-color: var(--header-bg);
+    color: var(--header-color-alt);
+    border-bottom: 3px solid var(--header-color-alt);
+}
+
 .logo {
-    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    font-size: 2.5rem;
     font-family: rozha_oneregular;
     width: fit-content;
 }
@@ -128,8 +151,6 @@ body {
     text-decoration: none;
     color: var(--logo-color);
     display: flex;
-    flex-direction: column;
-    line-height: 2rem;
 }
 
 .logo__ampersand {
@@ -137,17 +158,17 @@ body {
 }
 
 .header {
+    background-color: var(--header-bg);
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 32px;
-    padding: 8px 32px;
 }
 
 .header__nav {
     display: flex;
-    gap: 24px;
+    padding-top: 4px;
 }
 
 .footer {
