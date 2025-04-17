@@ -59,6 +59,9 @@ ol, ul {
     --header-color: var(--gold);
     --header-color-alt: var(--gold-alt);
 
+    --header-color-selected: var(--red);
+    --header-color-selected-alt: var(--red-alt);
+
     --logo-color: var(--gold);
     --logo-color-alt: var(--green);
 
@@ -136,6 +139,16 @@ body {
     background-color: var(--header-bg);
     color: var(--header-color-alt);
     border-bottom: 3px solid var(--header-color-alt);
+}
+
+.button--header--selected {
+    color: var(--header-color-selected);
+    border-bottom: 3px solid var(--header-color-selected);  
+}
+
+.button--header--selected:hover {
+    color: var(--header-color-selected-alt);
+    border-bottom: 3px solid var(--header-color-selected-alt);  
 }
 
 .logo {
