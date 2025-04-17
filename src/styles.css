@@ -95,6 +95,12 @@ body {
     min-height: 100vh;
 }
 
+#content {
+    display: grid;
+    max-width: 800px;
+    justify-self: center;
+}
+
 .button {
     font-size: 1rem;
     padding: 6px 12px;
@@ -178,12 +184,6 @@ body {
 .credit-link:hover {
     text-decoration: underline;
     color: var(--credit-link-text-hover);
-}
-
-#content {
-    display: grid;
-    max-width: 800px;
-    justify-self: center;
 }
 
 .hero {
