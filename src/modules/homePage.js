@@ -1,3 +1,5 @@
+import './homePage.css';
+
 const homePage = document.createElement('div');
 homePage.classList.add('home-page-wrapper');
 

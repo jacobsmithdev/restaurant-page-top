@@ -1,0 +1,25 @@
+:root {
+   --menu-list-bg: var(--gold);
+   --menu-list-text: var(--dark-navy);
+}
+
+.menu__header {
+    font-family: 'rozha_oneregular';
+    font-weight: normal;
+    font-size: 3rem;
+    justify-self: center;
+ }
+
+ .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+ }
+
+ .menu-list__item {
+    min-width: 300px;
+    background-color: var(--menu-list-bg);
+    color: var(--menu-list-text);
+    font-weight: bold;
+    padding: 8px 16px;
+ }

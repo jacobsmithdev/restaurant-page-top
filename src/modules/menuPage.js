@@ -1,3 +1,4 @@
+import './menuPage.css';
 
 const menuOptions = ["Specials", "Meals", "Breads", "Sides", "Drinks"];
 

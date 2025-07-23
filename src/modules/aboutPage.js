@@ -1,3 +1,5 @@
+import './aboutPage.css';
+
 const aboutListItems = [
     "Contact", 
     "Privacy Policy", 
