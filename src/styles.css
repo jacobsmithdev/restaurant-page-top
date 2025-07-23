@@ -95,6 +95,7 @@ body {
 }
 
 #content {
+    grid-area: content;
     display: grid;
     max-width: 800px;
     justify-self: center;
@@ -163,6 +164,7 @@ body {
 }
 
 .header {
+    grid-area: header;
     background-color: var(--header-bg);
     display: flex;
     flex-wrap: wrap;
