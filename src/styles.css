@@ -91,11 +91,11 @@ body {
 
 .layout-wrapper {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr minmax(auto, 850px) 1fr;
     grid-template-rows: auto 1fr auto;
-    grid-template-areas: 'header'
-                         'content'
-                         'footer';
+    grid-template-areas: 'header header header'
+                         '. content .'
+                         'footer footer footer';
     width: 100%;
     min-height: 100vh;
 }
@@ -103,8 +103,6 @@ body {
 #content {
     grid-area: content;
     display: grid;
-    max-width: 800px;
-    justify-self: center;
 }
 
 .button {
