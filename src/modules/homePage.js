@@ -4,83 +4,58 @@ const homePage = document.createElement('div');
 homePage.classList.add('home-page-wrapper');
 
 const hero = createHeroElement();
-const menu = createMenuElement();
-homePage.append(hero, menu);
+homePage.append(hero);
 
 function createHeroElement() {
+    const heroWrapper = document.createElement('div');
+    const heroOuterBorder = document.createElement('div');
+    const heroInnerBorder = document.createElement('div');
+
     const hero = document.createElement('div');
+    const heroHeader = document.createElement('h1');
+    const heroSubtext = document.createElement('p');
 
-    const body = document.createElement('div');
-    const header = document.createElement('div');
-    const text = document.createElement('p');
+    const btnsWrapper = document.createElement('div');
+    const heroOrderBtn = document.createElement('button');
+    const heroLocationBtn = document.createElement('button');
+    const heroMenuBtn = document.createElement('button');
 
-    const buttonsContainer = document.createElement('div');
-    const orderButton = document.createElement('div'); 
-    const menuButton = document.createElement('div');
-    const locationButton = document.createElement('div');
+    heroWrapper.classList.add('hero-wrapper');
+    heroOuterBorder.classList.add('hero-wrapper__border-outer');
+    heroInnerBorder.classList.add('hero-wrapper__border-inner');
 
-    const heroImg = document.createElement('div');
+    hero.classList.add('hero')
+    heroHeader.classList.add('hero__header');
+    heroSubtext.classList.add('hero__subtext');
 
-    hero.classList.add('hero');
-    body.classList.add('hero__body');
-    header.classList.add('hero__header');
-    
-    buttonsContainer.classList.add('hero__buttons');
-    orderButton.classList.add('button');    
-    menuButton.classList.add('button');    
-    locationButton.classList.add('button');    
+    btnsWrapper.classList.add('hero__buttons-wrapper');
+    heroOrderBtn.classList.add('button', 'hero__button');
+    heroLocationBtn.classList.add('button', 'hero__button');
+    heroMenuBtn.classList.add('button', 'hero__button');
 
-    heroImg.classList.add('hero__img');
+    heroHeader.textContent = 'Every kind of soup.';
+    heroSubtext.textContent = 'Lorem ipsum dolor sit amet consectetur elit.';
+    heroOrderBtn.textContent = 'Order Online';
+    heroLocationBtn.textContent = 'Locations';
+    heroMenuBtn.textContent = 'Menu';
 
-    header.textContent = 'Every kind of soup.'
-    text.textContent = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, nemo. Soluta nostrum, quia, a quos unde '
+    btnsWrapper.append(
+        heroOrderBtn, 
+        heroLocationBtn, 
+        heroMenuBtn
+    )
 
-    locationButton.textContent = 'Find A Location';
-    orderButton.textContent = 'Order Online';
-    menuButton.textContent = 'Full Menu';
+    hero.append(
+        heroHeader, 
+        heroSubtext, 
+        btnsWrapper,
+    );
 
-    buttonsContainer.append(locationButton, orderButton, menuButton)
-    body.append(header, text, buttonsContainer);
-    hero.append(body, heroImg);
-    return hero;
-}
+    heroInnerBorder.append(hero);
+    heroOuterBorder.append(heroInnerBorder);
+    heroWrapper.append(heroOuterBorder);
 
-function createMenuElement() {
-    const menu = document.createElement('div');
-
-    const specialsCard = document.createElement('a');
-    const soupCard = document.createElement('a');
-    const breadCard = document.createElement('a');
-
-    const specialsText = document.createElement('div');
-    const soupsText = document.createElement('div');
-    const breadsText = document.createElement('div');
-
-    menu.classList.add('menu-preview');
-
-    specialsCard.classList.add('menu-card', 'menu-card--red');
-    soupCard.classList.add('menu-card');
-    breadCard.classList.add('menu-card', 'menu-card--green');
-    
-    specialsText.classList.add('menu-card__text');
-    soupsText.classList.add('menu-card__text');
-    breadsText.classList.add('menu-card__text');
-    
-    specialsText.textContent = 'Specials';
-    soupsText.textContent = 'Soups';
-    breadsText.textContent = 'Breads';
-
-    specialsCard.setAttribute('href', '#');
-    soupCard.setAttribute('href', '#');
-    breadCard.setAttribute('href', '#');
-
-    specialsCard.append(specialsText);
-    soupCard.append(soupsText);
-    breadCard.append(breadsText);
-
-    menu.append(specialsCard, soupCard, breadCard);
-
-    return menu;
+    return heroWrapper;
 }
 
 export default homePage;

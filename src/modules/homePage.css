@@ -1,87 +1,70 @@
 :root {
-    --menu-card-text: var(--dark-navy);
-    --menu-card-bg: var(--gold);
-    --menu-card-bg-green: var(--green);
-    --menu-card-bg-red: var(--red);
+    --content-width: 850px;
+
+    --hero-text: var(--gold);
+    --hero-border: var(--brown);
+    --hero-shadow: var(--shadow-medium);
+
+    --bg-shadow-dark: var(--shadow-dark);
+    --bg-shadow-light: var(--shadow-light);
+}
+
+.hero-wrapper {  
+    padding: 8px;
+    background-image: url("../assets/img/hero_bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: center;
+    background-position: center;
+    background-size: var(--content-width);
+    height: 100%;
+    color: var(--hero-text);
+
+    /* Gradient overlay for background image. See: */
+    /* https://www.youtube.com/watch?v=NwnZU6mWJkk&ab_channel=KevinPowell */
+    border-image: linear-gradient(
+                    var(--bg-shadow-light), 
+                    var(--bg-shadow-dark))
+                  fill 1;
+  }
+
+.hero-wrapper__border-outer {
+    border: 3px solid var(--hero-border);
+    height: 100%;
+}
+
+.hero-wrapper__border-inner {
+    border-left: 3px solid var(--hero-border);
+    border-right: 3px solid var(--hero-border);
+    margin: 0 8px;
+    padding: 24px;
+    height: 100%;
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: 1fr 200px;
-    grid-template-rows: auto;
-}
-
-.hero__body {
-    display: grid;
-    gap: 16px;
-    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .hero__header {
-    font-size: 2.5rem;
+    text-shadow: 0px 0px 8px var(--hero-shadow);
     font-family: rozha_oneregular;
+    font-weight: normal;
+    padding-top: 36px;
+    font-size: 3rem;
 }
 
-.hero__buttons {
+.hero__subtext {
+    text-shadow: 0px 0px 8px var(--hero-shadow);
+}
+
+.hero__buttons-wrapper {
+    margin-top: 24px;
     display: flex;
-    gap: 32px;
-}
-
-.hero__img {
-    background-image: url(../assets/img/placeholder.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-.menu-preview {
-    min-height: 200px;
-    min-width: 200px;
-    display: flex;
+    gap: 16px;
     flex-wrap: wrap;
-    margin: 0 auto;
-  }
-  
-  .menu-card {
-    flex: 1;
-    text-decoration: none;
-    background: 100%/cover url('../assets/img/placeholder_bg.png') no-repeat;
-    display: grid;
-  }
-  
-  .menu-card--green .menu-card__text {
-      background-color: var(--menu-card-bg-green);
-  }
-  
-  .menu-card--red .menu-card__text {
-      background-color: var(--menu-card-bg-red);
-  }
-  
-  .menu-card__text {
-    background-color: var(--menu-card-bg);
-    font-weight: bold;
-    color: var(--menu-card-text);
-    padding: 8px 32px;
-    place-self: start;
-  }
-  
-  .menu__header {
-      font-family: 'rozha_oneregular';
-      font-weight: normal;
-      font-size: 3rem;
-      justify-self: center;
-  }
-  
-  .menu-list {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-  }
-  
-  .menu-list__item {
-      min-width: 300px;
-      background-color: var(--menu-list-bg);
-      color: var(--menu-list-text);
-      font-weight: bold;
-      padding: 8px 16px;
-  }
+}
+
+.hero__button {
+    box-shadow: 0px 0px 8px var(--hero-shadow);
+}
