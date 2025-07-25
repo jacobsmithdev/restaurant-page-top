@@ -41,6 +41,9 @@ ol, ul {
 
     --brown: hsl(23, 44%, 21%);
 
+    --light-brown: hsl(23, 43%, 49%);
+    --light-brown-alt: hsl(23, 54%, 59%);
+
     --red: hsl(0, 58%, 49%);
     --red-alt: hsl(0, 58%, 54%);
 
@@ -71,14 +74,13 @@ ol, ul {
     --logo-color: var(--gold);
     --logo-color-alt: var(--green);
 
+    --logo-color-subtle: var(--light-brown);
+
     --footer-bg: var(--dark-brown);
-    --footer-text: var(--beige);
+    --footer-text: var(--light-brown);
 
-    --subtle-link-text: var(--beige);
-    --subtle-link-text-hover: var(--beige-alt);
-
-    --credit-link-text: var(--navy);
-    --credit-link-text-hover: var(--navy-alt);
+    --subtle-link-text: var(--light-brown);
+    --subtle-link-text-hover: var(--light-brown-alt);
 
     --about-list-text: var(--gold);
     --about-list-text: var(--gold-alt);
@@ -185,19 +187,41 @@ body {
 
 .footer {
     grid-area: footer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    gap: 16px;
+    justify-items: center;
     padding: 32px;
-    gap: 8px;
+    padding-bottom: 64px;
     background: var(--footer-bg);
 }
 
-.footer-list {
+.footer__content-wrapper {
     display: flex;
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer__copyright {
     color: var(--footer-text);
+    text-align: center;
+}
+
+.footer-section {
+    border-top: 2px solid var(--brown);
+    padding: 8px;
+    flex: 1;
+    display: grid;
+    min-width: max-content;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-family: rozha_oneregular;
+}
+
+.footer-logo__a {
+    color: var(--logo-color-subtle);
+    text-decoration: none;
 }
 
 .subtle-link {
@@ -210,12 +234,14 @@ body {
     color: var(--subtle-link-text-hover);
 }
 
-.credit-link {
-    text-decoration: none;
-    color: var(--credit-link-text);
+.footer-socials {
+    display: flex;
+    gap: 8px;
 }
 
-.credit-link:hover {
-    text-decoration: underline;
-    color: var(--credit-link-text-hover);
+.social-media-icon {
+    width: 24px;
+    height: 24px;
+    background: var(--footer-text);
+    border-radius: 4px;
 }
