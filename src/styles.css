@@ -245,3 +245,7 @@ body {
     background: var(--footer-text);
     border-radius: 4px;
 }
+
+.social-media-icon:hover {
+    cursor: pointer;
+}
