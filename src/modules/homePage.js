@@ -21,8 +21,8 @@ function createHeroElement() {
     const heroMenuBtn = document.createElement('button');
 
     heroWrapper.classList.add('hero-wrapper');
-    heroOuterBorder.classList.add('hero-wrapper__border-outer');
-    heroInnerBorder.classList.add('hero-wrapper__border-inner');
+    heroOuterBorder.classList.add('framed-border__outer');
+    heroInnerBorder.classList.add('framed-border__inner');
 
     hero.classList.add('hero')
     heroHeader.classList.add('hero__header');

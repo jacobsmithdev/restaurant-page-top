@@ -2,7 +2,6 @@
     --content-width: 850px;
 
     --hero-text: var(--gold);
-    --hero-border: var(--brown);
     --hero-shadow: var(--shadow-medium);
 
     --bg-shadow-dark: var(--shadow-dark);
@@ -26,19 +25,6 @@
                     var(--bg-shadow-dark))
                   fill 1;
   }
-
-.hero-wrapper__border-outer {
-    border: 3px solid var(--hero-border);
-    height: 100%;
-}
-
-.hero-wrapper__border-inner {
-    border-left: 3px solid var(--hero-border);
-    border-right: 3px solid var(--hero-border);
-    margin: 0 8px;
-    padding: 24px;
-    height: 100%;
-}
 
 .hero {
     display: flex;

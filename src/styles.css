@@ -84,6 +84,8 @@ ol, ul {
 
     --about-list-text: var(--gold);
     --about-list-text: var(--gold-alt);
+
+    --framed-border: var(--brown);
 }
 
 body {
@@ -248,4 +250,17 @@ body {
 
 .social-media-icon:hover {
     cursor: pointer;
+}
+
+.framed-border__outer {
+    border: 3px solid var(--framed-border);
+    height: 100%;
+}
+
+.framed-border__inner {
+    border-left: 3px solid var(--framed-border);
+    border-right: 3px solid var(--framed-border);
+    margin: 0 8px;
+    padding: 24px;
+    height: 100%;
 }
