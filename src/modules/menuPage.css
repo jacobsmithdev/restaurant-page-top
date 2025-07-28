@@ -1,6 +1,15 @@
 :root {
+   --menu-header-text: var(--gold);
+
    --menu-list-bg: var(--gold);
    --menu-list-text: var(--dark-brown);
+}
+
+.menu {
+   padding: 8px;
+   display: grid;
+   grid-template-rows: auto 1fr;
+   gap: 8px;
 }
 
 .menu__header {
@@ -8,12 +17,14 @@
     font-weight: normal;
     font-size: 3rem;
     justify-self: center;
+    color: var(--menu-header-text);
  }
 
  .menu-list {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    padding: 8px;
  }
 
  .menu-list__item {
