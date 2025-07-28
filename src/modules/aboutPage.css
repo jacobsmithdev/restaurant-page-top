@@ -1,15 +1,26 @@
+:root {
+    --about-header-text: var(--gold);
+}
 
 .about {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr;
     gap: 16px;
+    padding: 8px;
 }
 
 .about__header {
+    color: var(--about-header-text);
     font-family: 'rozha_oneregular';
     font-weight: normal;
     font-size: 3rem;
     justify-self: center;
+}
+
+.about__content {
+    padding: 16px;
+    display: grid;
+    gap: 16px;
 }
 
 .about__list {

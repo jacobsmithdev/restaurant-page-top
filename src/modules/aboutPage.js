@@ -12,13 +12,27 @@ const aboutTextContent = "Lorem, ipsum dolor sit amet consectetur adipisicing el
 
 function createMenuElement() {
     const about = document.createElement('div');
+
     const header = document.createElement('h1');
+    const headerOuterBorder = document.createElement('div');
+    const headerInnerBorder = document.createElement('div');
+
+    const aboutContent = document.createElement('div');
+    const aboutContentWrapper = document.createElement('div');
+
     const aboutText = document.createElement('p');
     const aboutList = document.createElement('ul');
 
     about.classList.add('about');
+
     header.classList.add('about__header');
+    headerOuterBorder.classList.add('framed-border__outer');
+    headerInnerBorder.classList.add('framed-border__inner');
+
     aboutList.classList.add('about__list');
+
+    aboutContent.classList.add('about__content');
+    aboutContentWrapper.classList.add('framed-border__outer');
     
     header.textContent = 'About';
     aboutText.textContent = aboutTextContent;
@@ -38,7 +52,13 @@ function createMenuElement() {
         aboutList.append(item);
     })
 
-    about.append(header, aboutText, aboutList);
+    headerInnerBorder.append(header);
+    headerOuterBorder.append(headerInnerBorder);
+
+    aboutContent.append(aboutText, aboutList);
+    aboutContentWrapper.append(aboutContent);
+
+    about.append(headerOuterBorder, aboutContentWrapper);
 
     return about;
 }
