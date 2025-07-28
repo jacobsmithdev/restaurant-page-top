@@ -174,7 +174,7 @@ body {
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: center;
-    gap: 32px;
+    gap: 0 32px;
 }
 
 .header__nav {
